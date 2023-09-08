@@ -27,6 +27,22 @@ Visualization >> createObjects: amt radius: radius class: cls [
 			yourself ]
 ]
 
+{ #category : #rendering }
+Visualization >> drawOnForm [
+	| c formCanvas morph time duration extent |
+	c := self container.
+	extent := 512 asPoint.
+	morph := c createMorph.
+	morph extent: extent.
+	time := c currentTime.
+	duration := 5 seconds asMilliSeconds.
+	formCanvas := FormCanvas extent: extent.
+	[c currentTime > (time + duration) ] 
+	whileFalse: [ morph drawOn: formCanvas ].
+	
+	^ formCanvas form
+]
+
 { #category : #accessing }
 Visualization >> force [
 	^ force
@@ -127,12 +143,22 @@ Visualization >> reset [
 { #category : #running }
 Visualization >> run [
 	<script: 'self new run'>
-	| form |
+	| form r1 r2 |
 	self build.
-	self canvas open
-	"form := self drawOnForm.
+	random next > 0.5 
+		ifTrue: [ r1 := r2 := 200 ]
+		ifFalse: [ 
+			r1 := random rsNext: 100 and: 200.
+			r2 := random rsNext: 100 and: 200.
+			 ] .
+	self force: 12;
+		particlesSize: 1200;
+		particlesRadius: r1;
+		interferencesSize: 150;
+		interferencesRadius: r2.
+	form := self drawOnForm.
 	form saveAsPPMFile.
-	"
+	
 ]
 
 { #category : #hooks }
