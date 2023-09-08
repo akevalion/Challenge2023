@@ -14,15 +14,16 @@ Metacello new
 
 This code should work for MacOS and some linux distributions.
 
-1. First prepare pharo in your environment.
-2. Clone this repository.
-3. From your terminal enter to your local copy and execute:
+1. Clone this repository.
+2. From your terminal enter to your local copy and execute:
    ```sh
     $ ./install.sh
    ```
-4. Then to create an image run
+3. Then to create an image run
    ```sh
      $ ./run.sh
    ```
-5. You will get a file in the root folder with a random name with extension .ppm
-6. Each time you run it will produce a different image
+4. You will get a file in the root folder with a random name with extension .ppm
+<img width="496" alt="image" src="https://github.com/akevalion/Challenge2023/assets/10532890/16fc8ee7-2827-4c9a-beaf-bb66030cd58a">
+
+5. Each time you run it will produce a different image
