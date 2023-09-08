@@ -1,4 +1,4 @@
 | |
 Visualization new run.
-'new image created' traceCr.
+'=> New image created' traceCr.
 Smalltalk quitPrimitive
