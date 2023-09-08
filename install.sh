@@ -1,2 +1,2 @@
-curl -L https://get.pharo.org/110+vm | bash
+curl -L https://get.pharo.org/64/alpha+vm | bash
 ./pharo --headless Pharo.image ./scripts/install.st

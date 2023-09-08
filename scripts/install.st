@@ -5,8 +5,4 @@ Metacello new
     repository: 'github://akevalion/Challenge2023';
     load.
 
-Visualization new run.
-'=> Installed :V' traceCr.
-Smalltalk snapshot: true andQuit: false.
-'=> New image created' traceCr.
-Smalltalk quitPrimitive
+Smalltalk snapshot: true andQuit: true.
