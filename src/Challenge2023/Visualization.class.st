@@ -17,6 +17,16 @@ Class {
 	#category : #Challenge2023
 }
 
+{ #category : #private }
+Visualization >> createObjects: amt radius: radius class: cls [
+	^ (1 to: amt) collect: [ :i | | r |
+		r := random next * 360.
+		r := r radiansToDegrees.
+		cls new
+			position: r cos @ r sin * radius;
+			yourself ]
+]
+
 { #category : #accessing }
 Visualization >> force [
 	^ force
@@ -119,9 +129,10 @@ Visualization >> run [
 	<script: 'self new run'>
 	| form |
 	self build.
-	form := self drawOnForm.
+	self canvas open
+	"form := self drawOnForm.
 	form saveAsPPMFile.
-	
+	"
 ]
 
 { #category : #hooks }
@@ -130,6 +141,14 @@ Visualization >> setInterferences [
 		createObjects: self interferencesSize
 		radius: self interferencesRadius
 		class: CInterference
+]
+
+{ #category : #hooks }
+Visualization >> setParticles [
+	particles := self
+		createObjects: self particlesSize
+		radius: self particlesRadius
+		class: CParticle
 ]
 
 { #category : #updating }
