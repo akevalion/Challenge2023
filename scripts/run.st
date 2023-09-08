@@ -1,2 +1,3 @@
 Visualization new run.
-'=> New image generated' traceCr.
+'=> New image generated :V' traceCr.
+Smalltalk quitPrimitive.
