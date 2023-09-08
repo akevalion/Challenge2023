@@ -6,5 +6,6 @@ Metacello new
     load.
 '=> Installed :V' traceCr.
 Smalltalk snapshot: true andQuit: false.
-'=> Saving state' traceCr.
-Smalltalk quitPrimitive.
+Visualization new run.
+'=> New image created' traceCr.
+Smalltalk quitPrimitive
