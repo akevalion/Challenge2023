@@ -1,6 +1,6 @@
 # Challenge2023
 Just for fun.
-This project tries to solve this problems [challenge2023](https://gist.github.com/victor-soliz-coderoad-com/ce3bc411f5873fa9b46956826ae13826)
+This project tries to solve this problem [challenge2023](https://gist.github.com/victor-soliz-coderoad-com/ce3bc411f5873fa9b46956826ae13826)
 
 # Install
 In pharo12 use: 
