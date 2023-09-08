@@ -5,4 +5,6 @@ Metacello new
     repository: 'github://akevalion/Challenge2023';
     load.
 '=> Installed :V' traceCr.
-Smalltalk snapshot: true andQuit: true.
+Smalltalk snapshot: true andQuit: false.
+'=> Saving state' traceCr.
+Smalltalk quitPrimitive.
